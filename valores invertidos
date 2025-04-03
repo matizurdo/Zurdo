@@ -1,0 +1,9 @@
+a = input("ingrese el valor a: ")
+b = input("ingrese el valor b: ")
+
+if a == b:
+    print("los valores deben ser distintos")
+    
+else:
+    print(f"el nuevo valor de a es: {b}")
+    print(f"el nuevo valor de b es: {a}")
