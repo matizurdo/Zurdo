@@ -1,0 +1,13 @@
+contraseña="uca"
+entrada=""
+intentos=0
+
+while entrada!= contraseña and intentos < 3:
+    entrada= input("ingrese la contraseña: ")
+    if entrada !=contraseña:
+        print("incorrecta: ")
+        intentos +=1
+if entrada == contraseña:
+    print("contraseña correcta" )
+else:
+    print("no hay mas intentos")
