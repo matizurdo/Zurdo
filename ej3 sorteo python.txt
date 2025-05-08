@@ -1,0 +1,17 @@
+import random
+
+def generar_sorteo():
+    """Genera una jugada del Quini 6 con 6 números únicos del 0 al 45."""
+    return sorted(random.sample(range(0, 46), 6))
+
+def imprimir_y_guardar_resultados(sorteos, archivo_salida):
+    """Imprime en pantalla y guarda los resultados en un archivo."""
+    with open(archivo_salida, "w", encoding="utf-8") as archivo:
+        for i, sorteo in enumerate(sorteos, start=1):
+            linea = f"Sorteo {i}: {sorteo}"
+            print(linea)
+            archivo.write(linea + "\n")
+
+# 3. Generar 5 sorteos de ejemplo
+sorteos = [generar_sorteo() for _ in range(5)]
+imprimir_y_guardar_resultados(sorteos, "resultados.txt")
